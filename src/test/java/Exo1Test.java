@@ -19,7 +19,7 @@ public class Exo1Test {
 
         Exo1.main(null);
 
-        Assert.assertEquals(outContent.toString().trim(), "dude");
+        Assert.assertEquals("dude", outContent.toString().trim());
     }
 
 }

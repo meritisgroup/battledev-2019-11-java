@@ -7,20 +7,24 @@ import java.io.PrintStream;
 
 import static org.junit.Assert.*;
 
-public class Exo2Test {
+public class Exo4Test {
 
     @Test
-    public void testWith2() throws Exception {
-        String test = "15\n34\n25\n10\n";
+    public void test1() throws Exception {
+        String test = "2 2 100\n" +
+                "600 40\n" +
+                "1000 50\n" +
+                "20 40\n" +
+                "15 80";
         ByteArrayInputStream in = new ByteArrayInputStream(test.getBytes());
         System.setIn(in);
 
         ByteArrayOutputStream outContent = new ByteArrayOutputStream();
         System.setOut(new PrintStream(outContent));
 
-        Exo2.main(null);
+        Exo4.main(null);
 
-        Assert.assertEquals("44", outContent.toString().trim());
+        Assert.assertEquals("1950", outContent.toString().trim());
     }
 
 }
